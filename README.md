@@ -3,7 +3,7 @@
 ## Introduction
 Convert YOLOv3 and YOLOv3-tiny (PyTorch version) into TensorRT models, through the torch2trt Python API.
 
-## Install
+## Installation 
 #### Clone the repo
     git clone https://github.com/DocF/YOLOv3-Torch2TRT.git
     
@@ -35,7 +35,7 @@ Acceleration Techs：
 
 Here are some results on TITAN xp:
 
-| Model name | Input Size |  FP16 | Entire Model(FPS) | Backbone(FPS) | 
+| Model name | Input Size |  FP16 | Entire Mode*(FPS) | Backbone+FeatureNet(FPS) | 
 |:---------: |------------|:-----:|:-----------------:|:-------------:|
 | YOLOv3  | 320×320 |  | 87.58 Hz| 102.95 Hz| 
 |         | 320×320 | ✔️ | 83.63 Hz| 100.36 Hz| 
@@ -45,6 +45,8 @@ Here are some results on TITAN xp:
 |              | 320×320 |  ✔️ | 379.11 Hz| 727.82 Hz| 
 | YOLOv3-tiny-TRT | 320×320 |  |684.75 Hz| 1035.11 Hz| 
 |                 | 320×320 |  ✔️ |649.71 Hz| 1012.66 Hz| 
+
+Entire Model* = Backbone + Feature Net + YOLO Head
 
     python3 detect.py
 
